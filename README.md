@@ -77,6 +77,12 @@ alks.generateConsoleUrl(alksKey, function(err, url){
 
 ### getIamRoleTypes(server, userid, password, callback)
 
+Returns a list of current IAM role types.
+
 ### createIamKey(account, password, callback)
 
+Generates a new session for use in creating IAM roles and console sessions.
+
 ### createIamRole(account, password, roleName, roleType, includeDefaultPolicies, callback)
+
+Creates a new IAM role, provided account must contain valid ALKS IAM session.
