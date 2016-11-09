@@ -1,0 +1,43 @@
+{
+  "name": "alks-node",
+  "version": "0.2.0",
+  "description": "Node client for ALKS",
+  "main": "lib/alks-api.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha ./test"
+  },
+  "engines": {
+    "node": ">=0.10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Cox-Automotive/alks-node.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Cox Automotive",
+    "email": "brian.antonelli@coxautoinc.com",
+    "url": "https://github.com/Cox-Automotive/"
+  },
+  "bugs": {
+    "url": "https://github.com/Cox-Automotive/alks-node/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/Cox-Automotive/alks-node/blob/master/COPYING"
+    }
+  ],
+  "keywords": [
+    "alks"
+  ],
+  "dependencies": {
+    "moment": "^2.15.2",
+    "request": "^2.72.0",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.5.3"
+  }
+}
