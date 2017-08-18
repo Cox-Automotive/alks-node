@@ -39,7 +39,7 @@ var data = {
     password: 'my-network-password'
 };
 
-alks.createKey(data, 'password', 2, function(err, key){
+alks.createKey(data, 'password', 2, {}, function(err, key){
     if(err) console.error(err);
     else console.log(JSON.stringify(key));
 });
@@ -61,7 +61,7 @@ alks.getAccounts('server', 'username', 'password', {}, function(err, accounts){
 Returns a AWS console URL for a given key. The URL is good for 15 minutes.
 
 ```js
-alks.generateConsoleUrl(alksKey, function(err, url){
+alks.generateConsoleUrl(alksKey, {}, function(err, url){
     if(err) console.error(err);
     else console.log('The console URL is: %s', url);
 });
@@ -82,3 +82,42 @@ Creates a new IAM role, provided account must contain valid ALKS IAM session.
 ### deleteIamRole(account, password, roleName, options, callback)
 
 Deletes a previously created IAM role, provided account must contain valid ALKS IAM session.
+
+### createLongTermKey(account, password, iamUserName, options, callback)
+
+Creates a new longterm access key with the provided information. Returns a JSON document.
+
+```js
+var data = {
+    alksAccount: 'alksAccount',
+    alksRole: 'alksRole',
+    server: 'endpoint',
+    userid: 'my-network-id',
+    password: 'my-network-password'
+};
+
+alks.createLongTermKey(data, 'password', 'iamUser', {}, function(err, ltk){
+    if(err) console.error(err);
+    else console.log(JSON.stringify(ltk));
+});
+```
+
+### deleteLongTermKey(account, password, iamUserName, options, callback)
+
+Deletes a previously created longterm key role, provided account must contain valid ALKS IAM session.
+
+
+```js
+var data = {
+    alksAccount: 'alksAccount',
+    alksRole: 'alksRole',
+    server: 'endpoint',
+    userid: 'my-network-id',
+    password: 'my-network-password'
+};
+
+alks.deleteLongTermKey(data, 'password', 'iamUser', {}, function(err, ltk){
+    if(err) console.error(err);
+    else console.log(JSON.stringify(ltk));
+});
+```
