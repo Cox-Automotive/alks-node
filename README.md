@@ -79,6 +79,10 @@ Generates a new session for use in creating IAM roles and console sessions.
 
 Creates a new IAM role, provided account must contain valid ALKS IAM session.
 
+### createIamTrustRole(account, password, roleName, roleType, trustArn, options, callback)
+
+Creates a new IAM trust role, provided account must contain valid ALKS IAM session.
+
 ### deleteIamRole(account, password, roleName, options, callback)
 
 Deletes a previously created IAM role, provided account must contain valid ALKS IAM session.
