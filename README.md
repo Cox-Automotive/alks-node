@@ -125,3 +125,20 @@ alks.deleteLongTermKey(data, 'password', 'iamUser', {}, function(err, ltk){
     else console.log(JSON.stringify(ltk));
 });
 ```
+
+### twoFAToAccessToken(token, options, callback)
+
+Exchanges a 2FA refresh token for an access token.
+
+
+```js
+var data = {
+    alksAccount: 'alksAccount',
+    server: 'endpoint'
+};
+
+alks.twoFAToAccessToken('bLGjhD2HVh5x4TZfWoXF5aGxDRD3afnlONBxsjN7g8U', data, {}, function(err, ltk){
+    if(err) console.error(err);
+    else console.log(JSON.stringify(ltk));
+});
+```
