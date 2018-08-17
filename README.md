@@ -126,7 +126,7 @@ alks.deleteLongTermKey(data, 'password', 'iamUser', {}, function(err, ltk){
 });
 ```
 
-### twoFAToAccessToken(token, options, callback)
+### refreshTokenToAccessToken(token, options, callback)
 
 Exchanges a 2FA refresh token for an access token.
 
@@ -137,7 +137,7 @@ var data = {
     server: 'endpoint'
 };
 
-alks.twoFAToAccessToken('bLGjhD2HVh5x4TZfWoXF5aGxDRD3afnlONBxsjN7g8U', data, {}, function(err, ltk){
+alks.refreshTokenToAccessToken('bLGjhD2HVh5x4TZfWoXF5aGxDRD3afnlONBxsjN7g8U', data, {}, function(err, ltk){
     if(err) console.error(err);
     else console.log(JSON.stringify(ltk));
 });
