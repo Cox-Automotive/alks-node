@@ -1,6 +1,6 @@
 {
   "name": "alks-node",
-  "version": "0.10.0",
+  "version": "0.10.1",
   "description": "Node client for ALKS",
   "main": "lib/alks-api.js",
   "scripts": {
